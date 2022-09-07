@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-md-12">
+      <h1 class="text-center p-4 mt-2" style="font-family: Comic Sans MS;">List Employees</h1>
+      <hr>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-dark table-striped table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Full Name</th>
+          <th scope="col">Username</th>
+          <th scope="col">Email</th>
+          <th scope="col">Department</th>
+          <th scope="col">Edit | Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of employees">
+          <td>{{ item.fullname }}</td>
+          <td>{{ item.username }}</td>
+          <td>{{ item.email }}</td>
+          <td>{{ item.department }}</td>
+          <td>
+            <a href="edit-employee/{{ item.id }}" class="btn btn-outline-info btn-sm ml-2" (click)="edit()" style="margin-right: 10px;" href="">Edit</a>
+            <button class="btn btn-outline-danger btn-sm ml-2" (click)="delete(item)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

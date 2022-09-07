@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="text-center p-4 mt-2" style="font-family: Comic Sans MS;">Add Employees</h1>
+        <hr>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <form [formGroup]="addEmployee" novalidate class="form">
+            <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input type="text" formControlName="fullname" class="form-control" placeholder="Full Name" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input type="text" formControlName="username" class="form-control" placeholder="username" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email address</label>
+                <input type="email" formControlName="email" class="form-control" placeholder="name@example.com" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Department</label>
+                <input type="text" formControlName="department" class="form-control" placeholder="Department">
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-success w-100" (click)="onSubmit()" >Add Employee</button>
+            </div>
+        </form>
+    </div>
+  </div>
